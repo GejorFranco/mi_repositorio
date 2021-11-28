@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Roboto:ital,wght@1,100&display=swap");
+/* font-family: 'Roboto', sans-serif; */
+body {
+  background-color: #b2b9b6;
+  font-family: 'Roboto', sans-serif;
+  font-weight: bold;
+}
+
+header {
+  background-color: #fef5ef;
+  width: 100%;
+  height: 300px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: right;
+      -ms-flex-align: right;
+          align-items: right;
+  position: fixed;
+}
+
+.Logo {
+  margin-left: 100px;
+}
+
+h1 {
+  color: red;
+  text-decoration: underline;
+  font-weight: bold;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+}
+
+@-webkit-keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+h2 {
+  color: purple;
+  text-decoration: underline;
+  font-weight: bold;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-name: aparecer;
+          animation-name: aparecer;
+}
+
+@keyframes aparecer {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.imagenEncabezado {
+  width: 100%;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+p {
+  color: black;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: bold;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 10px;
+  z-index: 10000;
+}
+
+th {
+  color: indigo;
+}
+
+td {
+  color: rgba(12, 52, 231, 0.973);
+}
+
+tr:nth-child(even) {
+  background-color: #a9e638;
+}
+
+.bordesRedondeados {
+  border-radius: 20px;
+}
+
+tr:nth-of-type(1) > th {
+  background-color: orange;
+}
+
+.section {
+  text-align: left;
+  margin: 10px;
+  padding: 10px;
+  border: solid 1px #99a799;
+}
+
+div {
+  text-align: left;
+  margin: 5px;
+  padding: 5px;
+  border: solid 1px #99a799;
+}
+
+img:hover {
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+.gridPadre {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -ms-grid-rows: auto auto;
+      grid-template-rows: auto auto;
+      grid-template-areas: "productoUno productoDos" "productoTres productoCuatro";
+}
+
+.productoUno {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: productoUno;
+}
+
+.productoDos {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: productoDos;
+}
+
+.productoTres {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: productoTres;
+}
+
+.productoCuatro {
+  -ms-grid-row: 2;
+  -ms-grid-column: 2;
+  grid-area: productoCuatro;
+}
+
+/*VISTA MOVIL */
+@media only screen and (max-width: 599px) {
+  .imagenEncabezado {
+    display: none;
+  }
+  .gridPadre {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+    -ms-grid-rows: auto auto auto auto auto auto;
+        grid-template-rows: auto auto auto auto auto auto;
+        grid-template-areas: "productoUno" "productoDos" "productoTres" "productoCuatro";
+  }
+  .productoUno {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: productoUno;
+  }
+  .productoDos {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: productoDos;
+  }
+  .productoTres {
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: productoTres;
+  }
+  .productoCuatro {
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: productoCuatro;
+  }
+}
+
+input {
+  width: 150px;
+  height: 50px;
+  -webkit-transition: all 2s;
+  transition: all 2s;
+}
+
+input:focus {
+  width: 250px;
+  font-size: 24px;
+}
+
+#grid {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(green), to(white));
+  background-image: linear-gradient(green, white);
+}
+
+#grad {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(none));
+  background-image: linear-gradient(none);
+}
+
+/*Creamos el bucle para usar los valores del mapa*/
+.btn--twitter {
+  background-color: #55acee;
+}
+
+.btn--facebook {
+  background-color: #3a5795;
+}
+
+.btn--send-mail {
+  background-color: #C25E30;
+}
+/*# sourceMappingURL=styles.css.map */
